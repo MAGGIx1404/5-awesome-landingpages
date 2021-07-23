@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- overlay -->
+      <div class="overlay first"></div>
+      <div class="overlay second"></div>
+      <div class="overlay third"></div>
+
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="menu">
+          <a href="./index.html"><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="lang">eng</div>
+        <div class="search">
+          <a href="./index.html"> <i class="fas fa-search"></i></a>
+        </div>
+      </nav>
+
+      <!-- social media -->
+      <div class="media">
+        <ul>
+          <li>facebook</li>
+          <li>instagram</li>
+          <li>twitter</li>
+        </ul>
+      </div>
+
+      <!-- text -->
+      <div class="text">
+        <h1><span class="hidetext">jeet&meggi</span></h1>
+        <h2>duality</h2>
+        <h3><span class="hidetext">collection 2017</span></h3>
+        <p>
+          <span class="hidetext">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eum
+            hic neque reiciendis recusandae, cumque architecto nobis eos. Nobis
+            delectus laudantium, explicabo numquam quo corrupti ab facilis id
+            natus quia?
+          </span>
+        </p>
+      </div>
+
+      <!-- sponsor -->
+      <div class="sponsor">
+        <img src="./images/sponsor-logo.png" alt="network problem" />
+        <p>official sponsor</p>
+      </div>
+
+      <!-- distortion -->
+      <div class="distortion"></div>
+    </div>
+
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/68f941b034.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>
+    <!-- three js -->
+    <script src="./javascript/three.min.js"></script>
+    <!-- hover effect js -->
+    <script src="./javascript/hover-effect.umd.js"></script>
+    <script>
+      var myAnimation = new hoverEffect({
+        parent: document.querySelector(".distortion"),
+        intensity: 0.2,
+        image1: "./images/01.png",
+        image2: "./images/02.png",
+        displacementImage: "./images/diss.png",
+        imagesRatio: 380 / 300,
+      });
+    </script>
+    <script src="./javascript/main.js"></script>
+  </body>
+</html>
