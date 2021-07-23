@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: url(./images/watchdog1.jpg) no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: black;
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav-btns {
+  width: 28rem;
+  position: absolute;
+  left: 25%;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav-btns a {
+  position: relative;
+  transition: all 0.5s ease;
+  padding: 0.3rem 0;
+  z-index: 1;
+}
+
+.nav-btns a:hover {
+  color: red;
+}
+
+.nav-btns a::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  transition: all 0.5s ease;
+  background-color: red;
+}
+
+.nav-btns a:hover::after {
+  width: 100%;
+}
+
+.nav .logo {
+  width: 15rem;
+  height: auto;
+  overflow: hidden;
+}
+
+.nav .logo img {
+  width: 100%;
+  height: auto;
+}
+
+.nav .icons {
+  width: 6rem;
+  font-size: 1.5rem;
+}
+
+.nav .icons a {
+  transition: all 0.5s ease;
+}
+
+.nav .icons a:hover {
+  color: red;
+}
+
+.bottom-border {
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  height: 1px;
+  background-color: gray;
+  width: 0;
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  position: absolute;
+  top: 12rem;
+  left: 4rem;
+  text-shadow: 0 0 25px #888888;
+}
+
+.subtitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  top: 20rem;
+  left: 5rem;
+  text-shadow: 0 0 25px #888888;
+}
+
+.para {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  top: 25rem;
+  left: 5rem;
+  width: 25rem;
+  line-height: 2;
+}
+
+.watch {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  bottom: 12rem;
+  left: 5rem;
+  border-bottom: 1px solid white;
+  padding: 1rem;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.watch::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: red;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.watch:hover::after {
+  width: 100%;
+}
+
+.img-1 {
+  position: absolute;
+  top: 7rem;
+  right: 3rem;
+  background: url(./images/watchdog2.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 20rem;
+  width: 0;
+  transition: all 0.5s ease;
+}
+
+.img-1:hover {
+  opacity: 0.8;
+  box-shadow: 0px 0px 25px #888888;
+}
+
+.img-2 {
+  position: absolute;
+  bottom: 4rem;
+  right: 3rem;
+  background: url(./images/watchdog3.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: auto;
+  width: 0;
+  min-height: 15rem;
+  transition: all 0.5s ease;
+}
+
+.img-2:hover {
+  opacity: 0.8;
+  box-shadow: 0px 0px 25px #888888;
+}
+
+.overlay {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #252424;
+  z-index: 10;
+}
+.first {
+  top: 0;
+  height: 33.3%;
+}
+
+.second {
+  top: 33.3%;
+  height: 33.3%;
+}
+
+.third {
+  height: 33.3%;
+  top: 66.6%;
+}
+
+.slider-no {
+  color: gray;
+  position: absolute;
+  bottom: 15rem;
+  right: 37rem;
+}
+
+.slider-no span {
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+}
+
+.prev {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #888;
+  font-size: 1.2rem;
+  color: white;
+  position: absolute;
+  bottom: 10rem;
+  right: 40rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.prev:hover {
+  background-color: red;
+}
+
+.next {
+  transition: all 0.5s ease;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10rem;
+  right: 36rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #888;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.next:hover {
+  background-color: red;
+}
